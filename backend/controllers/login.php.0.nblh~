@@ -1,0 +1,26 @@
+<?php
+
+class Login extends Controller {
+
+	function Login()
+	{
+		parent::Controller();	
+	}
+	
+	function index()
+	{
+              $this->load->view('login_view');
+	}
+        
+        function entrar(){
+            
+            $this->load->model('usuario_model');
+            $data['titulo'] = $this->usuario_model->usuario_login($_POST['login'],$_POST['senha']);
+            
+            
+            redirect('Dashboard');
+            
+        }
+}
+
+?>
