@@ -19,20 +19,37 @@ class Login extends Controller {
             
             $this->load->model('usuario_model');
             
+            $data = $this->usuario_model->usuario_login($login,$senha);
+  
             
-            if( $this->usuario_model->usuario_login($login,$senha) > 0){
+            if( $data->rows > 0){
                 
-                $this->load->view('debug');
+//                // attempt to login
+                if($this->simplelogin->login($data->login,$data->senha)) {
+                    
+                    redirect('Dashboard',$data);
+                    
+                }           
                 
             }else{
                 
                 redirect('Login');
                 
-            }           
-            
-           
+            }     
             
         }
+        
+        
+        function Logout(){
+            
+            
+            $this->simplelogin->logout();
+            redirect('Login');
+            
+            
+        }
+        
+        
 }
 
 ?>

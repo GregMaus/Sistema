@@ -9,8 +9,17 @@ class Dashboard extends Controller {
 	
 	function index()
 	{
-               // $this->load->view('header');
+            if($this->session->userdata('logged_in')) {
+                
+                // $this->load->view('header');
 		$this->load->view('debug');
+                
+            }else{
+                
+                redirect('Login');
+                
+            }
+
 	}
 }
 
