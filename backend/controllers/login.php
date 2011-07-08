@@ -27,8 +27,7 @@ class Login extends Controller {
 //                // attempt to login
                 if($this->simplelogin->login($data->login,$data->senha)) {
                     
-                    redirect('Dashboard',$data);
-                    
+                    redirect('Dashboard',$data);                   
                 }           
                 
             }else{
@@ -40,14 +39,7 @@ class Login extends Controller {
         }
         
         
-        function Logout(){
-            
-            
-            $this->simplelogin->logout();
-            redirect('Login');
-            
-            
-        }
+
         
         
 }

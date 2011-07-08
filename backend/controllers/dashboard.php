@@ -6,13 +6,19 @@ class Dashboard extends Controller {
 	{
 		parent::Controller();	
 	}
-	
+        
+        
 	function index()
 	{
             if($this->session->userdata('logged_in')) {
                 
-                // $this->load->view('header');
-		$this->load->view('debug');
+                $data['grao'] = array ('Dashboard');                
+                
+                
+                //ESTA VIEW SEMPRE ANTES DOS OUTROS
+		$this->load->view('dashboard_view',$data);
+                
+                $this->load->view('dashboard_main');
                 
             }else{
                 
@@ -21,7 +27,15 @@ class Dashboard extends Controller {
             }
 
 	}
+                
+        
+        function Logout(){
+            
+            
+            $this->simplelogin->logout();
+            redirect('Login');
+            
+            
+        }
+        
 }
-
-/* End of file welcome.php */
-/* Location: ./system/application/controllers/welcome.php */

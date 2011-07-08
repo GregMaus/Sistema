@@ -5,7 +5,7 @@ html, div, map, dt, isindex, form, header, aside, section, section, article, foo
 } 
 
 html, body {
-height: 100%;
+
 margin: 0;
 padding: 0;
 font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
@@ -438,7 +438,7 @@ float: left;
 }
 
 .width_3_quarter {
-width: 66%;
+width: 95%;
 margin-right: 0;
 float: left;
 }
