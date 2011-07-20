@@ -97,7 +97,12 @@
 <!--			<li class="icn_edit_article"><a href="#">Visitantes</a></li>-->
                         <li class="icn_view_users"><a href="Visitantes">Visitantes</a></li>
 			<li class="icn_categories"><a href="Secao">Seções</a></li>
-			<li class="icn_tags"><a href="#">Menus</a></li>
+			<li class="icn_tags"><a href="Menu">Menus</a>
+                            <ul>                                
+                                <li><a href="Linksmenu">Links do Menu</a></li>
+                                <li><a href="Sublinksmenu">Sub menu</a></li>
+                            </ul>
+                        </li>
 		</ul>
 		<h3>Usuários</h3>
 		<ul class="toggle">

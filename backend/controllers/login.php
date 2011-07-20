@@ -9,7 +9,17 @@ class Login extends Controller {
 	
 	function index()
 	{
-              $this->load->view('login_view');
+            
+            if($this->session->userdata('logged_in')) {
+                
+                redirect('Dashboard');   
+                
+            }else{
+                
+               $this->load->view('login_view');
+            }
+            
+              
 	}
         
         function entrar(){
