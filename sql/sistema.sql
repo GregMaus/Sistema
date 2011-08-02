@@ -126,4 +126,9 @@ CREATE TABLE sys_subsecao (
 )
 ;
 
+INSERT INTO adm_tipo_usuario (tipo) VALUES ('dev'),('custumer');
+
+INSERT INTO adm_usuario (adm_tipo_usuario_id_tipo_usuario,nome,login,senha) VALUES(1,'ADMINISTRADOR','admin','21232f297a57a5a743894a0e4a801fc3');
+
+
 

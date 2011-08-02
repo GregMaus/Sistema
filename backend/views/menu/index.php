@@ -4,25 +4,12 @@
        
 		<article class="module width_full">
                      <form action="Menu/novo_menu" method="post">
-			<header><h3>Cadastrar Links dos Menus</h3></header>
+			<header><h3>Cadastrar Novo Menu</h3></header>
 				<div class="module_content">
 						<fieldset>
-                                                        <label>Menu:</label>
-                                                            <select name="menu">
-                                                                <?php foreach ($menus as $menu) { ?>
-                                                                <option value="<?php echo $menu->id_adm_menu ?>"><?php echo $menu->nome ?></option>
-                                                                <?php }?>
-                                                            </select>
-                                                        <br></br>
-                                                        <label>Label:</label>
-                                                            <input type="text" name="link">
-                                                        <br></br><br></br>
-                                                        <label>Link:</label>
-                                                            <input type="text" name="link">
-                                                        <br></br><br></br>
-                                                        <label>Imagem:</label>
-                                                            <input type="file" name="link">
-                                                        <br></br><br></br>
+                                                        
+							<label>Nome do Menu</label>
+							<input type="text" name="menu" value="<?php $menu ?>">
                                                   
 						</fieldset>
 						
@@ -55,20 +42,20 @@
                                             </tr>
                                     </thead>
                                     <tbody>
-                                    <?php foreach ($links as $link) {  ?>
+                                    <?php foreach ($menus as $menu) {  ?>
 
                                             <tr >
-                                                    <td><?php echo $link->id_adm_menu ?></td>
-                                                    <td><?php echo $link->nome ?></td>
-                                                    <td><?php echo $link->created_at ?></td>
+                                                    <td><?php echo $menu->id_adm_menu ?></td>
+                                                    <td><?php echo $menu->nome ?></td>
+                                                    <td><?php echo $menu->created_at ?></td>
                                                     <td>xx</td>
                                                     <td class="center">
-                                                        <a href="Menu/menu_edit/<?php echo $link->id_adm_menu ?>">
+                                                        <a href="Menu/menu_edit/<?php echo $menu->id_adm_menu ?>">
                                                             <input type="image" src="assets/images/icn_edit.png" title="Edit"/>
                                                         </a>
                                                     </td>
                                                     <td class="center">
-                                                        <a href="Menu/menu_delete/<?php echo $link->id_adm_menu ?>">
+                                                        <a href="Menu/menu_delete/<?php echo $menu->id_adm_menu ?>">
                                                             <input type="image" src="assets/images/icn_trash.png" title="Trash">
                                                         </a>
                                                     </td>

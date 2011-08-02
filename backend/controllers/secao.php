@@ -36,7 +36,7 @@ class Secao extends Controller {
                     //ESTA VIEW SEMPRE ANTES DOS OUTROS
                     $this->load->view('dashboard_view',$data);
 
-                    $this->load->view('dashboard_secao');
+                    $this->load->view('secao/index');
                 
             }else{
                 
@@ -60,7 +60,7 @@ class Secao extends Controller {
                     //ESTA VIEW SEMPRE ANTES DOS OUTROS
                     $this->load->view('dashboard_view',$data);
 
-                    $this->load->view('dashboard_secao');
+                    $this->load->view('secao/index');
             }
             
         }

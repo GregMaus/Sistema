@@ -32,7 +32,7 @@ class sublinksmenu extends Controller {
                     //ESTA VIEW SEMPRE ANTES DOS OUTROS
                     $this->load->view('dashboard_view',$data);
 
-                    $this->load->view('dashboard_sublinks_menu');
+                    $this->load->view('sublinks/index');
                 
             }else{
                 

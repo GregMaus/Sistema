@@ -15,24 +15,27 @@ class links_menu_model extends Model {
     
     public function get_all(){
 
-        $query = $this->db->get('adm_links_menu');        
+        $this->db->select('*');
+        $this->db->from('adm_links_menu');
+        $this->db->join('adm_menu', 'id_adm_menu = adm_menu_id_adm_menu', 'left');
+        $query = $this->db->get();
+        
         return $query->result();
 
     }
     
     
-    public function add_records($valor){
+    public function add_records($options = array()){
         
-        $this->db->set('nome', $valor);
-        $this->db->insert('adm_links_menu');
-        return $this->db->affected_rows();      
+        $this->db->insert('adm_links_menu',$options);
+        return $this->db->affected_rows();    
         
     }
     
     public function delete_records(){
         
         $this->db->where('id_adm_links_menu',$this->uri->segment(3));
-        $this->db->delete('adm_link_menu');
+        $this->db->delete('adm_links_menu');
         return $this->db->affected_rows();
         
     }

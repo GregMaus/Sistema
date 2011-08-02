@@ -32,7 +32,7 @@ class menu extends Controller {
                     //ESTA VIEW SEMPRE ANTES DOS OUTROS
                     $this->load->view('dashboard_view',$data);
 
-                    $this->load->view('dashboard_menu');
+                    $this->load->view('menu/index');
                 
             }else{
                 
@@ -70,6 +70,40 @@ class menu extends Controller {
                  redirect('Menu');
                  
              }                        
+        }
+        
+        function menu_edit($id){
+            
+            $this->load->model('menu_model');
+            
+            $data['menu'] = $this->menu_model->get_by_id($id);
+
+                $data['grao'] = array ('Conteúdo','Menu','Editar menu');                
+
+                $data['menus'] = $this->menu_model->get_all();               
+//
+//                //ESTA VIEW SEMPRE ANTES DOS OUTROS
+                $this->load->view('dashboard_view',$data);
+
+                $this->load->view('menu/edit');         
+            
+        }
+        
+        function menu_update($id){
+           
+            $this->form_validation->set_rules('menu','menu','trim|required');
+            
+            if($this->form_validation->run()){
+                
+                $_POST['id']= $id;
+                if($this->menu_model->update_record($_POST)){
+                    
+                    redirect('Menu');
+                    
+                }
+            }
+            
+            
         }
         
         

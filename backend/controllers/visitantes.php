@@ -29,7 +29,7 @@ class Visitantes extends Controller {
                 //ESTA VIEW SEMPRE ANTES DOS OUTROS
 		$this->load->view('dashboard_view',$data);
                 
-                $this->load->view('dashboard_visitantes');
+                $this->load->view('visitantes/index');
                 
             }else{
                 

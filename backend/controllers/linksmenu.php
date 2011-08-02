@@ -34,7 +34,7 @@ class linksmenu extends Controller {
                     //ESTA VIEW SEMPRE ANTES DOS OUTROS
                     $this->load->view('dashboard_view',$data);
 
-                    $this->load->view('dashboard_links_menu');
+                    $this->load->view('links/index');
                 
             }else{
                 
@@ -50,26 +50,31 @@ class linksmenu extends Controller {
             
             $this->load->model('links_menu_model');
             
-            $data = $this->input->post('menu');         
-            
+            $data = array(
+
+                'adm_menu_id_adm_menu' => $this->input->post('menu'),
+                'label'  => $this->input->post('label'),
+                'anchor'  => $this->input->post('link'),
+
+            );            
                
-            if ($this->menu_model->add_records($data)){                  
+            if ($this->links_menu_model->add_records($data)){                  
                   
-                    $this->message->set('Seção cadastrada com Sucesso!','success');
+                    $this->message->set('Sub Link cadastrado com Sucesso!','success');
                     
-                    redirect('Menu');
+                    redirect('Linksmenu');
             }           
             
         }
         
         
-        function menu_delete(){
+        function link_delete(){
             
-             $this->load->model('menu_model');
+            $this->load->model('links_menu_model');
              
-             if($this->menu_model->delete_records()){
+             if($this->links_menu_model->delete_records()){
                  
-                 redirect('Menu');
+                 redirect('Linksmenu');
                  
              }                        
         }
