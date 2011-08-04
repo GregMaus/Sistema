@@ -39,7 +39,7 @@ class menu_model extends Model {
     
     function update_record($options = array()){
         
-        if(isset($options['menu']))            
+        if(isset($options['id']))            
             $this->db->set('nome',$options['menu']);
         
         $this->db->where('id_adm_menu',$options['id']);

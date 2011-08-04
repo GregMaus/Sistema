@@ -93,14 +93,14 @@
 		<hr/>
 		<h3>Conteúdo</h3>
 		<ul class="toggle">
-			<li class="icn_new_article"><a href="Mensagens">Mensagens</a></li>
+			<li class="icn_new_article"><a href="<?php echo base_url() ?>Mensagens">Mensagens</a></li>
 <!--			<li class="icn_edit_article"><a href="#">Visitantes</a></li>-->
-                        <li class="icn_view_users"><a href="Visitantes">Visitantes</a></li>
-			<li class="icn_categories"><a href="Secao">Seções</a></li>
-			<li class="icn_tags"><a href="Menu">Menus</a>
+                        <li class="icn_view_users"><a href="<?php echo base_url() ?>Visitantes">Visitantes</a></li>
+			<li class="icn_categories"><a href="<?php echo base_url() ?>Secao">Seções</a></li>
+			<li class="icn_tags"><a href="<?php echo base_url() ?>Menu">Menus</a>
                             <ul>                                
-                                <li><a href="Linksmenu">Links do Menu</a></li>
-                                <li><a href="Sublinksmenu">Sub menu</a></li>
+                                <li><a href="<?php echo base_url() ?>Linksmenu">Links do Menu</a></li>
+                                <li><a href="<?php echo base_url() ?>Sublinksmenu">Sub menu</a></li>
                             </ul>
                         </li>
 		</ul>

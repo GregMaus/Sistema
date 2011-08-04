@@ -1,16 +1,16 @@
 <section id="main" class="column">
    
-  <?php echo $this->message->display();  ?>    
-    
+  <?php echo $this->message->display();   ?>
        
 		<article class="module width_full">
-                     <form action="../menu_update/<?php echo $menu->id_adm_menu ?>" method="post">
-			<header><h3>Editando Menu</h3></header>
+                     <form action="../secao_update/<?php echo $secao->id_sys_secao ?>" method="post">
+			<header><h3>Editando Seção</h3></header>
 				<div class="module_content">
 						<fieldset>
-                                                        <input type="hidden" name="id" value="<?php echo $menu->id_adm_menu ?>">
-							<label>Nome do Menu</label>
-							<input type="text" name="menu" value="<?php echo $menu->nome ?>">                                                  
+                                                   
+							<label>Nome da Seção</label>
+							<input type="text" name="secao" value="<?php echo $secao->nome ?>">
+                                                  
 						</fieldset>
 						
                                     <div class="clear"></div>

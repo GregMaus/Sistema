@@ -7,12 +7,22 @@
 			<header><h3>Cadastrar Sub Links Menus</h3></header>
 				<div class="module_content">
 						<fieldset>
-                                                   
-							<label>Nome do Menu</label>
-							<input type="text" name="link">
-                                                        <br>
-                                                        <label>Nome do Menu</label>
-							<input type="text" name="link">
+                                                        <label>Link:</label>
+                                                            <select name="menu">
+                                                                <?php foreach ($links as $link) { ?>
+                                                                <option value="<?php echo $link->id_adm_links_menu ?>"><?php echo $link->label ?></option>
+                                                                <?php }?>
+                                                            </select>
+                                                        <br></br>
+                                                        <label>Label:</label>
+                                                            <input type="text" name="label">
+                                                        <br></br><br></br>
+                                                        <label>Link:</label>
+                                                            <input type="text" name="link">
+                                                        <br></br><br></br>
+                                                        <label>Imagem:</label>
+                                                            <input type="file" name="imagem">
+                                                        <br></br><br></br>
                                                   
 						</fieldset>
 						
@@ -45,20 +55,20 @@
                                             </tr>
                                     </thead>
                                     <tbody>
-                                    <?php foreach ($menus as $menu) {  ?>
+                                    <?php foreach ($sublinks as $sublink) {  ?>
 
-                                            <tr >
-                                                    <td><?php echo $menu->id_adm_menu ?></td>
-                                                    <td><?php echo $menu->nome ?></td>
-                                                    <td><?php echo $menu->created_at ?></td>
-                                                    <td>xx</td>
+                                             <tr >
+                                                    <td><?php echo $sublink->linklabel ?></td>
+                                                    <td><?php echo $sublink->id_sublink_menu ?></td>
+                                                    <td><?php echo $sublink->label ?></td>                                                    
+                                                    <td><?php echo $sublink->anchor ?></td>
                                                     <td class="center">
-                                                        <a href="Menu/menu_edit/<?php echo $menu->id_adm_menu ?>">
+                                                        <a href="Linksmenu/link_edit/<?php echo $sublink->id_sublink_menu ?>">
                                                             <input type="image" src="assets/images/icn_edit.png" title="Edit"/>
                                                         </a>
                                                     </td>
                                                     <td class="center">
-                                                        <a href="Menu/menu_delete/<?php echo $menu->id_adm_menu ?>">
+                                                        <a href="Linksmenu/link_delete/<?php echo $sublink->id_sublink_menu ?>">
                                                             <input type="image" src="assets/images/icn_trash.png" title="Trash">
                                                         </a>
                                                     </td>

@@ -22,12 +22,14 @@ class sublinksmenu extends Controller {
 	{                      
             
             $this->load->model('sublinks_menu_model');
+            $this->load->model('links_menu_model');
             
             if($this->session->userdata('logged_in')) {
                 
                     $data['grao'] = array ('Conteúdo','Menu','Sub Menu');                
 
-                    $data['menus'] = $this->sublinks_menu_model->get_all();               
+                    $data['links'] = $this->links_menu_model->get_all();
+                    $data['sublinks'] = $this->sublinks_menu_model->get_all();               
 
                     //ESTA VIEW SEMPRE ANTES DOS OUTROS
                     $this->load->view('dashboard_view',$data);

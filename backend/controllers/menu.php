@@ -80,9 +80,7 @@ class menu extends Controller {
 
                 $data['grao'] = array ('Conteúdo','Menu','Editar menu');                
 
-                $data['menus'] = $this->menu_model->get_all();               
-//
-//                //ESTA VIEW SEMPRE ANTES DOS OUTROS
+                //ESTA VIEW SEMPRE ANTES DOS OUTROS
                 $this->load->view('dashboard_view',$data);
 
                 $this->load->view('menu/edit');         
@@ -90,20 +88,32 @@ class menu extends Controller {
         }
         
         function menu_update($id){
+            
+            $this->load->model('menu_model');
            
             $this->form_validation->set_rules('menu','menu','trim|required');
             
             if($this->form_validation->run()){
                 
-                $_POST['id']= $id;
-                if($this->menu_model->update_record($_POST)){
+                $options = array (
                     
-                    redirect('Menu');
+                    'menu' => $_POST['menu'],
+                    'id' => $id                    
                     
-                }
+                );                
+               
+                        if($this->menu_model->update_record($options)){
+
+                            redirect('Menu');
+
+                        }   
+           
+            }else{
+                
+                redirect('Menu/menu_edit/'.$id);
+                
             }
-            
-            
+
         }
         
         

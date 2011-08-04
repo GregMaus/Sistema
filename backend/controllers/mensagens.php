@@ -29,7 +29,7 @@ class Mensagens extends Controller {
                 //ESTA VIEW SEMPRE ANTES DOS OUTROS
 		$this->load->view('dashboard_view',$data);
                 
-                $this->load->view('dashboard_mensagens');
+                $this->load->view('mensagens/index');
                 
             }else{
                 

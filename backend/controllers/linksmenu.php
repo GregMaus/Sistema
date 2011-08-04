@@ -79,6 +79,60 @@ class linksmenu extends Controller {
              }                        
         }
         
+        function link_edit($id){
+
+
+                    $this->load->model('links_menu_model');
+                    $this->load->model('menu_model');
+                    
+                    $data['menus'] = $this->menu_model->get_all(); 
+
+                    $data['link'] = $this->links_menu_model->get_by_id($id);
+                    
+
+                        $data['grao'] = array ('Conteúdo','Link','Editar link');                
+
+                       //ESTA VIEW SEMPRE ANTES DOS OUTROS
+                        $this->load->view('dashboard_view',$data);
+
+                        $this->load->view('links/edit');      
+                }
+
+
+        function link_update($id){
+
+                    $this->load->model('links_menu_model');                    
+
+                    $this->form_validation->set_rules('menu','menu','required');
+                    $this->form_validation->set_rules('label','label','trim|required');
+                    $this->form_validation->set_rules('link','link','trim|required');
+
+                    if($this->form_validation->run()){
+
+                        $options = array (
+
+                            'menu' => $_POST['menu'],
+                            'label' => $_POST['label'],
+                            'link' => $_POST['link'],
+                            'id' => $id                    
+
+                        );                
+
+                            if($this->links_menu_model->update_record($options)){
+
+                                redirect('Linksmenu');
+
+                            }   
+
+                    }else{
+
+                        $this->form_validation->set_message('rule', 'Error Message');
+                        redirect('Linksmenu/link_edit/'.$id);
+
+                    }
+
+                }
+        
         
 }
 

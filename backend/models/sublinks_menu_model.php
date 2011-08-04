@@ -15,7 +15,11 @@ class sublinks_menu_model extends Model {
     
     public function get_all(){
 
-        $query = $this->db->get('adm_sublink_menu');        
+        $this->db->select('lin.label as linklabel,sub.*');
+        $this->db->from('adm_sublink_menu as sub');
+        $this->db->join('adm_links_menu as lin', 'lin.id_adm_links_menu = sub.adm_links_menu_id_adm_links_menu', 'left');
+        $query = $this->db->get();
+        
         return $query->result();
 
     }

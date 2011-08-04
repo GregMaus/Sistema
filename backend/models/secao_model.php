@@ -39,25 +39,19 @@ class secao_model extends Model {
     
     function update_record($options = array()){
         
-        if(isset($options['nome']))            
-            $this->db->set('nome',$option['nome']);
+        if(isset($options['id']))            
+            $this->db->set('nome',$options['secao']);
         
-        if(isset($options['email']))            
-            $this->db->set('email',$option['email']);
+        $this->db->where('id_sys_secao',$options['id']);
+        $this->db->update('sys_secao');
         
-        if(isset($options['senha']))            
-            $this->db->set('senha',$option['senha']);
-        
-        $this->db->where('id',$options['id']);
-        $this->db->update('usuario');
-        
-        return $this->db->affected_rows();        
+        return $this->db->affected_rows();         
         
     }
     
     public function get_by_id($id){
         
-        $this->db->where('id',$id);
+        $this->db->where('id_sys_secao',$id);
         $query = $this->db->get('sys_secao');
         return $query->row(0);
         

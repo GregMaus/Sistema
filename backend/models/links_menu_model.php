@@ -42,17 +42,17 @@ class links_menu_model extends Model {
     
     function update_record($options = array()){
         
-        if(isset($options['nome']))            
-            $this->db->set('nome',$option['nome']);
+        if(isset($options['menu']))            
+            $this->db->set('adm_menu_id_adm_menu',$options['menu']);
         
-        if(isset($options['email']))            
-            $this->db->set('email',$option['email']);
+        if(isset($options['label']))            
+            $this->db->set('label',$options['label']);
         
-        if(isset($options['senha']))            
-            $this->db->set('senha',$option['senha']);
+        if(isset($options['link']))            
+            $this->db->set('anchor',$options['link']);
         
-        $this->db->where('id',$options['id']);
-        $this->db->update('usuario');
+        $this->db->where('id_adm_links_menu',$options['id']);
+        $this->db->update('adm_links_menu');
         
         return $this->db->affected_rows();        
         
@@ -60,7 +60,7 @@ class links_menu_model extends Model {
     
     public function get_by_id($id){
         
-        $this->db->where('id',$id);
+        $this->db->where('id_adm_links_menu',$id);
         $query = $this->db->get('adm_links_menu');
         return $query->row(0);
         

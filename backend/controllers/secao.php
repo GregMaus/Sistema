@@ -65,13 +65,7 @@ class Secao extends Controller {
             
         }
         
-        function secao_fail (){
-            
-            
-            
-        }
-        
-        
+    
         /*
          * FIM DAS FUNÇÕES DA VIEW
          */
@@ -115,24 +109,44 @@ class Secao extends Controller {
             
             $this->load->model('secao_model');
             
-            $data['usuario'] = $this->usuario_model->get_by_id($id);
+            $data['secao'] = $this->secao_model->get_by_id($id);
+
+                $data['grao'] = array ('Conteúdo','Seção','Editar seção');                
+
+               //ESTA VIEW SEMPRE ANTES DOS OUTROS
+                $this->load->view('dashboard_view',$data);
+
+                $this->load->view('secao/edit');      
+        }
+        
+        
+        function secao_update($id){
             
-            $this->form_validation->set_rules('nome','nome','trim|required');
+            $this->load->model('secao_model');
+           
+            $this->form_validation->set_rules('secao','secao','trim|required');
             
             if($this->form_validation->run()){
                 
-                $_POST['id'] = $id;
-                if($this->usuario_model->update_record($_POST)){
+                $options = array (
                     
-                    redirect('maincontroler');
+                    'secao' => $_POST['secao'],
+                    'id' => $id                    
                     
-                }
+                );                
+               
+                        if($this->secao_model->update_record($options)){
+
+                            redirect('Secao');
+
+                        }   
+           
+            }else{
                 
-                $this->load->view('update_view',$data);
+                redirect('Secao/secao_edit/'.$id);
                 
             }
-   
-            
+
         }
         
         
