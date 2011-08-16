@@ -106,7 +106,10 @@ class menu extends Controller {
 
                             redirect('Menu');
 
-                        }   
+                        } else{
+                            
+                             redirect('Menu/menu_edit/'.$id);
+                        }  
            
             }else{
                 

@@ -21,6 +21,7 @@ CREATE TABLE adm_sublink_menu (
   id_sublink_menu INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   adm_links_menu_id_adm_links_menu INTEGER UNSIGNED NOT NULL,
   label VARCHAR(255) NULL,
+  anchor VARCHAR(255) NULL,
   image VARCHAR(255) NULL,
   PRIMARY KEY(id_sublink_menu),
   INDEX adm_sublink_menu_FKIndex1(adm_links_menu_id_adm_links_menu)
@@ -131,4 +132,4 @@ INSERT INTO adm_tipo_usuario (tipo) VALUES ('dev'),('custumer');
 INSERT INTO adm_usuario (adm_tipo_usuario_id_tipo_usuario,nome,login,senha) VALUES(1,'ADMINISTRADOR','admin','21232f297a57a5a743894a0e4a801fc3');
 
 
-
+ALTER TABLE `adm_usuario` ADD `email` VARCHAR( 100 ) NOT NULL AFTER `senha` 

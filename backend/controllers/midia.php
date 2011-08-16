@@ -1,9 +1,9 @@
 <?php
 
-class Dashboard extends Controller
+class midia extends Controller
 {
 
-    function Dashboard()
+    function Midia()
     {
         parent::Controller();
     }
@@ -13,7 +13,7 @@ class Dashboard extends Controller
     {
         if ($this->session->userdata('logged_in')) {
 
-            $data['grao'] = array('Dashboard');
+            $data['grao'] = array('Midia','File Manager');
 
 
             //ESTA VIEW SEMPRE ANTES DOS OUTROS
@@ -28,16 +28,8 @@ class Dashboard extends Controller
         }
 
     }
-
-
-    function Logout()
-    {
-
-
-        $this->simplelogin->logout();
-        redirect('Login');
-
-
-    }
-
+    
 }
+    
+    
+?>

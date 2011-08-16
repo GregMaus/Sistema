@@ -7,8 +7,7 @@
                      <form action="../menu_update/<?php echo $menu->id_adm_menu ?>" method="post">
 			<header><h3>Editando Menu</h3></header>
 				<div class="module_content">
-						<fieldset>
-                                                        <input type="hidden" name="id" value="<?php echo $menu->id_adm_menu ?>">
+						<fieldset>                                                        
 							<label>Nome do Menu</label>
 							<input type="text" name="menu" value="<?php echo $menu->nome ?>">                                                  
 						</fieldset>

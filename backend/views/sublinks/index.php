@@ -3,12 +3,12 @@
   <?php echo $this->message->display();   ?>
        
 		<article class="module width_full">
-                     <form action="Menu/novo_menu" method="post">
+                     <form action="Sublinksmenu/novo_sublink" method="post">
 			<header><h3>Cadastrar Sub Links Menus</h3></header>
 				<div class="module_content">
 						<fieldset>
                                                         <label>Link:</label>
-                                                            <select name="menu">
+                                                            <select name="links">
                                                                 <?php foreach ($links as $link) { ?>
                                                                 <option value="<?php echo $link->id_adm_links_menu ?>"><?php echo $link->label ?></option>
                                                                 <?php }?>
@@ -17,7 +17,7 @@
                                                         <label>Label:</label>
                                                             <input type="text" name="label">
                                                         <br></br><br></br>
-                                                        <label>Link:</label>
+                                                        <label>Referência:</label>
                                                             <input type="text" name="link">
                                                         <br></br><br></br>
                                                         <label>Imagem:</label>
@@ -46,10 +46,11 @@
 			<table cellpadding="0" cellspacing="0" border="0" class="display tablesorter" >
                                     <thead>
                                             <tr>
+                                                    
+                                                    <th>Link</th>
                                                     <th>Código</th>
-                                                    <th>Nome</th>
-                                                    <th>Criado em</th>
-                                                    <th>Links</th>
+                                                    <th>Nome</th>                                                    
+                                                    <th>link</th>
                                                     <th>Editar</th>
                                                     <th>Excluir</th>
                                             </tr>
@@ -63,12 +64,12 @@
                                                     <td><?php echo $sublink->label ?></td>                                                    
                                                     <td><?php echo $sublink->anchor ?></td>
                                                     <td class="center">
-                                                        <a href="Linksmenu/link_edit/<?php echo $sublink->id_sublink_menu ?>">
+                                                        <a href="Sublinksmenu/sublink_edit/<?php echo $sublink->id_sublink_menu ?>">
                                                             <input type="image" src="assets/images/icn_edit.png" title="Edit"/>
                                                         </a>
                                                     </td>
                                                     <td class="center">
-                                                        <a href="Linksmenu/link_delete/<?php echo $sublink->id_sublink_menu ?>">
+                                                        <a href="Sublinksmenu/sublink_delete/<?php echo $sublink->id_sublink_menu ?>">
                                                             <input type="image" src="assets/images/icn_trash.png" title="Trash">
                                                         </a>
                                                     </td>

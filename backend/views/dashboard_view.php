@@ -100,19 +100,19 @@
 			<li class="icn_tags"><a href="<?php echo base_url() ?>Menu">Menus</a>
                             <ul>                                
                                 <li><a href="<?php echo base_url() ?>Linksmenu">Links do Menu</a></li>
-                                <li><a href="<?php echo base_url() ?>Sublinksmenu">Sub menu</a></li>
+                                <li><a href="<?php echo base_url() ?>Sublinksmenu">Sub Links menu</a></li>
                             </ul>
                         </li>
 		</ul>
 		<h3>Usuários</h3>
 		<ul class="toggle">
-			<li class="icn_add_user"><a href="#">Add New User</a></li>
-			<li class="icn_view_users"><a href="#">View Users</a></li>
+			<li class="icn_add_user"><a href="<?php echo base_url() ?>Usuario/novo_usuario">Novo Usuário</a></li>
+			<li class="icn_view_users"><a href="<?php echo base_url() ?>Usuario">Ver Usuários</a></li>
 			<li class="icn_profile"><a href="#">Your Profile</a></li>
 		</ul>
 		<h3>Midia</h3>
 		<ul class="toggle">
-			<li class="icn_folder"><a href="#">File Manager</a></li>
+			<li class="icn_folder"><a href="<?php echo base_url() ?>Midia">File Manager</a></li>
 			<li class="icn_photo"><a href="#">Gallery</a></li>
 			<li class="icn_audio"><a href="#">Audio</a></li>
 			<li class="icn_video"><a href="#">Video</a></li>

@@ -25,17 +25,16 @@ class sublinks_menu_model extends Model {
     }
     
     
-    public function add_records($valor){
+    public function add_records($options = array()){
         
-        $this->db->set('nome', $valor);
-        $this->db->insert('adm_sublink_menu');
-        return $this->db->affected_rows();      
+        $this->db->insert('adm_sublink_menu',$options);
+        return $this->db->affected_rows();     
         
     }
     
     public function delete_records(){
         
-        $this->db->where('id_adm_links_menu',$this->uri->segment(3));
+        $this->db->where('id_sublink_menu',$this->uri->segment(3));
         $this->db->delete('adm_sublink_menu');
         return $this->db->affected_rows();
         
@@ -43,17 +42,17 @@ class sublinks_menu_model extends Model {
     
     function update_record($options = array()){
         
-        if(isset($options['nome']))            
-            $this->db->set('nome',$option['nome']);
+        if(isset($options['links']))            
+            $this->db->set('adm_links_menu_id_adm_links_menu',$options['links']);
         
-        if(isset($options['email']))            
-            $this->db->set('email',$option['email']);
+        if(isset($options['label']))            
+            $this->db->set('label',$options['label']);
         
-        if(isset($options['senha']))            
-            $this->db->set('senha',$option['senha']);
+        if(isset($options['link']))            
+            $this->db->set('anchor',$options['link']);
         
-        $this->db->where('id',$options['id']);
-        $this->db->update('usuario');
+        $this->db->where('id_sublink_menu',$options['id']);
+        $this->db->update('adm_sublink_menu');
         
         return $this->db->affected_rows();        
         
@@ -61,7 +60,7 @@ class sublinks_menu_model extends Model {
     
     public function get_by_id($id){
         
-        $this->db->where('id',$id);
+        $this->db->where('id_sublink_menu',$id);
         $query = $this->db->get('adm_sublink_menu');
         return $query->row(0);
         
