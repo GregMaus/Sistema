@@ -1,12 +1,14 @@
 <section id="main" class="column">
    
-  <?php echo $this->message->display();  ?>    
+  <?php echo $this->message->display();  ?>   
+      
     
-       
+             
 		<article class="module width_full">
                      <form action="../usuario/add_usuario" method="post">
 			<header><h3>Novo Usuário</h3></header>
 				<div class="module_content">
+                
 						<fieldset>                                                        
 							<label>Nome do Usuario</label>
 							<input type="text" name="nome" value=""> 
@@ -35,7 +37,7 @@
 				</div>
 			<footer>
 				<div class="submit_link">
-					<input type="submit" value="Cadastrar" class="alt_btn">
+					<input type="submit" value="Cadastrar" class="alt_btn" />
 				</div>
 			</footer>
                           </form>

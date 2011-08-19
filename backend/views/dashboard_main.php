@@ -52,7 +52,7 @@
 			</thead> 
 			<tbody> 
 				<tr> 
-                                    <td><input type="checkbox"></td> 
+                                    <td><input type="checkbox" /></td> 
                                     <td>Lorem Ipsum Dolor Sit Amet blas lorem Ipsum Dolor Sit Amet</td> 
                                     <td>Mark Corrigan</td> 
                                     <td>5th April 2011</td> 

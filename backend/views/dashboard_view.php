@@ -6,15 +6,17 @@
 	<title>Painel de Administração</title>
 	
 	
-        <?php echo link_tag(base_url() .'assets/css/layout.css') . "\n"; ?>
-        <?php echo link_tag(base_url() .'assets/css/datatables/demo_page.css') . "\n"; ?>
-        <?php echo link_tag(base_url() .'assets/css/datatables/demo_table.css') . "\n"; ?>
-        <?php echo link_tag(base_url() .'assets/css/datatables/demo_table_jui.css') . "\n"; ?>
+    <?php echo link_tag(base_url() .'assets/css/layout.css') . "\n"; ?>
+    <?php echo link_tag(base_url() .'assets/css/style.css') . "\n"; ?>
+    <?php echo link_tag(base_url() .'assets/css/datatables/demo_page.css') . "\n"; ?>
+    <?php echo link_tag(base_url() .'assets/css/datatables/demo_table.css') . "\n"; ?>
+    <?php echo link_tag(base_url() .'assets/css/datatables/demo_table_jui.css') . "\n"; ?>
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
         <script src="assets/js/jquery.js" type="text/javascript"></script>
+        <script src="assets/js/script.js" type="text/javascript"></script>
         <script src="assets/js/jquery.dataTables.js" type="text/javascript"></script>	
 	<script src="assets/js/hideshow.js" type="text/javascript"></script>
 	<script src="assets/js/jquery.tablesorter.min.js" type="text/javascript"></script>
@@ -110,9 +112,9 @@
 			<li class="icn_view_users"><a href="<?php echo base_url() ?>Usuario">Ver Usuários</a></li>
 			<li class="icn_profile"><a href="#">Your Profile</a></li>
 		</ul>
-		<h3>Midia</h3>
+		<h3>Media</h3>
 		<ul class="toggle">
-			<li class="icn_folder"><a href="<?php echo base_url() ?>Midia">File Manager</a></li>
+			<li class="icn_folder"><a href="<?php echo base_url() ?>Media">File Manager</a></li>
 			<li class="icn_photo"><a href="#">Gallery</a></li>
 			<li class="icn_audio"><a href="#">Audio</a></li>
 			<li class="icn_video"><a href="#">Video</a></li>

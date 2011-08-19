@@ -357,10 +357,13 @@ if ( ! function_exists('get_mime_by_extension'))
 			if (is_array($mimes[$extension]))
 			{
 				// Multiple mime types, just give the first one
+                
+                
 				return current($mimes[$extension]);
 			}
 			else
 			{
+             
 				return $mimes[$extension];
 			}
 		}
@@ -459,6 +462,42 @@ if ( ! function_exists('octal_permissions'))
 	}
 }
 
+
+
+
+    function loadImageForExtension ($name){
+        
+        $image = null;
+        
+         switch (get_mime_by_extension($name)){ 
+                      
+                      	case 'image/jpeg':                        
+                          
+                            $image = "<img src='".base_url()."assets/images/icons/32/image.png' />";
+                         
+                          
+                   	     break;
+                      
+                      	case 'image/png' :
+                        
+                            $image = "<img src='".base_url()."assets/images/icons/32/image.png' />";
+                          
+                      	 break;
+                      
+                      	case 'application/pdf':
+                        
+                            $image = "<img src='".base_url()."assets/images/icons/32/pdf.png' />";
+                         
+                      	     break;
+                      
+                      	default :
+                      }
+                      
+                      return $image;
+        
+        
+        
+    }
 
 /* End of file file_helper.php */
 /* Location: ./system/helpers/file_helper.php */

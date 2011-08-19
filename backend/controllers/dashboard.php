@@ -15,7 +15,7 @@ class Dashboard extends Controller
 
             $data['grao'] = array('Dashboard');
 
-
+                
             //ESTA VIEW SEMPRE ANTES DOS OUTROS
             $this->load->view('dashboard_view', $data);
 

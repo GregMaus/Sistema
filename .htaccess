@@ -1,3 +1,4 @@
 RewriteEngine on
 RewriteCond $1 !^(index\.php|assets|robots\.txt)
+RewriteCond $1 !^(index\.php|upload|robots\.txt)
 RewriteRule ^(.*)$ index.php/$1 [L]

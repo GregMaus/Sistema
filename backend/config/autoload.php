@@ -51,7 +51,7 @@ $autoload['libraries'] = array('database','session','Simplelogin','Form_validati
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('form','html','url');
+$autoload['helper'] = array('form','html','url','directory','file');
 
 
 /*
