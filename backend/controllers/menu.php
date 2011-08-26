@@ -1,23 +1,34 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
- * Description of menu
- *
- * @author Gregori
+ * menu
+ * 
+ * @package Backend
+ * @subpackage controllers   
+ * @author sistema
+ * @copyright Gregori Maus
+ * @version 2011
+ * @access public
  */
 class menu extends Controller {
 
+	/**
+	 * menu::Menu()
+	 * 
+	 * @return
+	 */
 	function Menu()
 	{
 		parent::Controller();	
 	}
         
         
+	/**
+	 * menu::index()
+	 * 
+	 * @return
+	 */
 	function index()
 	{                      
             
@@ -43,6 +54,11 @@ class menu extends Controller {
         }
         
         
+        /**
+         * menu::novo_menu()
+         * 
+         * @return
+         */
         function novo_menu(){
             
             
@@ -61,6 +77,11 @@ class menu extends Controller {
         }
         
         
+        /**
+         * menu::menu_delete()
+         * 
+         * @return
+         */
         function menu_delete(){
             
              $this->load->model('menu_model');
@@ -72,6 +93,12 @@ class menu extends Controller {
              }                        
         }
         
+        /**
+         * menu::menu_edit()
+         * 
+         * @param mixed $id
+         * @return
+         */
         function menu_edit($id){
             
             $this->load->model('menu_model');
@@ -87,6 +114,12 @@ class menu extends Controller {
             
         }
         
+        /**
+         * menu::menu_update()
+         * 
+         * @param mixed $id
+         * @return
+         */
         function menu_update($id){
             
             $this->load->model('menu_model');

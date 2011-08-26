@@ -1,23 +1,34 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
- * Description of visitantes
- *
- * @author Greg
+ * Visitantes
+ * 
+ * @package Backend
+ * @subpackage controllers   
+ * @author sistema
+ * @copyright Gregori Maus
+ * @version 2011
+ * @access public
  */
 class Visitantes extends Controller {
 
+	/**
+	 * Visitantes::Visitantes()
+	 * 
+	 * @return
+	 */
 	function Visitantes()
 	{
 		parent::Controller();	
 	}
         
         
+	/**
+	 * Visitantes::index()
+	 * 
+	 * @return
+	 */
 	function index()
 	{
             

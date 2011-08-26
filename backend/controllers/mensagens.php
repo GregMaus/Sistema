@@ -1,23 +1,34 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
- * Description of mensagens
- *
- * @author Greg
+ * Mensagens
+ * 
+ * @package Backend
+ * @subpackage controllers   
+ * @author sistema
+ * @copyright Gregori Maus
+ * @version 2011
+ * @access public
  */
 class Mensagens extends Controller {
 
+	/**
+	 * Mensagens::Mensagens()
+	 * 
+	 * @return
+	 */
 	function Mensagens()
 	{
 		parent::Controller();	
 	}
         
         
+	/**
+	 * Mensagens::index()
+	 * 
+	 * @return
+	 */
 	function index()
 	{
             

@@ -1,23 +1,33 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- * Description of menu
- *
- * @author Gregori
+ * linksmenu
+ * 
+ * @package Backend
+ * @subpackage controllers   
+ * @author sistema
+ * @copyright Gregori Maus
+ * @version 2011
+ * @access public
  */
 class linksmenu extends Controller {
 
+	/**
+	 * linksmenu::Linksmenu()
+	 * 
+	 * @return
+	 */
 	function Linksmenu()
 	{
 		parent::Controller();	
 	}
         
         
+	/**
+	 * linksmenu::index()
+	 * 
+	 * @return
+	 */
 	function index()
 	{                      
             
@@ -45,6 +55,11 @@ class linksmenu extends Controller {
         }
         
         
+        /**
+         * linksmenu::novo_link()
+         * 
+         * @return
+         */
         function novo_link(){
             
             
@@ -68,6 +83,11 @@ class linksmenu extends Controller {
         }
         
         
+        /**
+         * linksmenu::link_delete()
+         * 
+         * @return
+         */
         function link_delete(){
             
             $this->load->model('links_menu_model');
@@ -79,6 +99,12 @@ class linksmenu extends Controller {
              }                        
         }
         
+        /**
+         * linksmenu::link_edit()
+         * 
+         * @param mixed $id
+         * @return
+         */
         function link_edit($id){
 
 
@@ -99,6 +125,12 @@ class linksmenu extends Controller {
                 }
 
 
+        /**
+         * linksmenu::link_update()
+         * 
+         * @param mixed $id
+         * @return
+         */
         function link_update($id){
 
                     $this->load->model('links_menu_model');                    

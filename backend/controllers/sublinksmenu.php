@@ -1,23 +1,34 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
- * Description of menu
- *
- * @author Gregori
+ * sublinksmenu
+ * 
+ * @package Backend
+ * @subpackage controllers   
+ * @author sistema
+ * @copyright Gregori Maus
+ * @version 2011
+ * @access public
  */
 class sublinksmenu extends Controller {
 
+	/**
+	 * sublinksmenu::Sublinksmenu()
+	 * 
+	 * @return
+	 */
 	function Sublinksmenu()
 	{
 		parent::Controller();	
 	}
         
         
+	/**
+	 * sublinksmenu::index()
+	 * 
+	 * @return
+	 */
 	function index()
 	{                      
             
@@ -45,6 +56,11 @@ class sublinksmenu extends Controller {
         }
         
         
+        /**
+         * sublinksmenu::novo_sublink()
+         * 
+         * @return
+         */
         function novo_sublink(){
             
             
@@ -69,6 +85,11 @@ class sublinksmenu extends Controller {
         }
         
         
+        /**
+         * sublinksmenu::sublink_delete()
+         * 
+         * @return
+         */
         function sublink_delete(){
             
               $this->load->model('sublinks_menu_model');
@@ -81,6 +102,12 @@ class sublinksmenu extends Controller {
         }
         
         
+        /**
+         * sublinksmenu::sublink_edit()
+         * 
+         * @param mixed $id
+         * @return
+         */
         function sublink_edit($id){
 
 
@@ -102,6 +129,12 @@ class sublinksmenu extends Controller {
                 }
 
 
+        /**
+         * sublinksmenu::sublink_update()
+         * 
+         * @param mixed $id
+         * @return
+         */
         function sublink_update($id){
 
                     $this->load->model('sublinks_menu_model');                    

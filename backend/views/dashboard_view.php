@@ -98,7 +98,11 @@
 			<li class="icn_new_article"><a href="<?php echo base_url() ?>Mensagens">Mensagens</a></li>
 <!--			<li class="icn_edit_article"><a href="#">Visitantes</a></li>-->
                         <li class="icn_view_users"><a href="<?php echo base_url() ?>Visitantes">Visitantes</a></li>
-			<li class="icn_categories"><a href="<?php echo base_url() ?>Secao">Seções</a></li>
+			<li class="icn_categories"><a href="<?php echo base_url() ?>Secao">Seções</a>
+                            <ul>                                
+                                <li><a href="<?php echo base_url() ?>Subsecao">Subseções</a></li>                                
+                            </ul>
+            </li>
 			<li class="icn_tags"><a href="<?php echo base_url() ?>Menu">Menus</a>
                             <ul>                                
                                 <li><a href="<?php echo base_url() ?>Linksmenu">Links do Menu</a></li>
@@ -115,7 +119,7 @@
 		<h3>Media</h3>
 		<ul class="toggle">
 			<li class="icn_folder"><a href="<?php echo base_url() ?>Media">File Manager</a></li>
-			<li class="icn_photo"><a href="#">Gallery</a></li>
+			<li class="icn_photo"><a href="<?php echo base_url() ?>Galeria">Galeria</a></li>
 			<li class="icn_audio"><a href="#">Audio</a></li>
 			<li class="icn_video"><a href="#">Video</a></li>
 		</ul>

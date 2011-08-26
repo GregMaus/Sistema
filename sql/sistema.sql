@@ -79,7 +79,7 @@ CREATE TABLE cli_visitor (
 CREATE TABLE sys_media (
   id_media INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   sys_secao_id_sys_secao INTEGER UNSIGNED NOT NULL,
-  sys_subsecao_id_sys_subsecao INTEGER UNSIGNED NOT NULL,
+  sys_subsecao_id_sys_subsecao INTEGER UNSIGNED NULL,
   sys_media_type_id_media_type INTEGER UNSIGNED NOT NULL,
   nome VARCHAR(50) NULL,
   path VARCHAR(255) NULL,
@@ -133,3 +133,5 @@ INSERT INTO adm_usuario (adm_tipo_usuario_id_tipo_usuario,nome,login,senha) VALU
 
 
 ALTER TABLE `adm_usuario` ADD `email` VARCHAR( 100 ) NOT NULL AFTER `senha` 
+
+ALTER TABLE  `sys_secao` ADD  `qnt_sub` INT NOT NULL AFTER  `nome`

@@ -473,8 +473,7 @@ if ( ! function_exists('octal_permissions'))
                       
                       	case 'image/jpeg':                        
                           
-                            $image = "<img src='".base_url()."assets/images/icons/32/image.png' />";
-                         
+                            $image = "<img src='".base_url()."assets/images/icons/32/image.png' />";                         
                           
                    	     break;
                       
@@ -489,8 +488,31 @@ if ( ! function_exists('octal_permissions'))
                             $image = "<img src='".base_url()."assets/images/icons/32/pdf.png' />";
                          
                       	     break;
+                             
+                      	case 'text/plain':
+                        
+                            $image = "<img src='".base_url()."assets/images/icons/32/txt.png' />";
+                         
+                      	     break;
+                             
+                      	case 'application/x-httpd-php':
+                        
+                            $image = "<img src='".base_url()."assets/images/icons/32/php.png' />";
+                         
+                      	     break;
+                             
+                      	case 'text/html':
+                        
+                            $image = "<img src='".base_url()."assets/images/icons/32/html.png' />";
+                         
+                      	     break;
                       
                       	default :
+                        
+                            $image = "<img src='".base_url()."assets/images/icons/32/unknown.png' />";
+                            
+                            break;
+                        
                       }
                       
                       return $image;

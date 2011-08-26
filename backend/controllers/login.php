@@ -1,12 +1,34 @@
 <?php
 
+/**
+ * Login
+ * 
+ * Controller referente ao sistema de login.
+ * 
+ * @package Backend
+ * @subpackage controllers   
+ * @author sistema
+ * @copyright Gregori Maus
+ * @version 2011
+ * @access public
+ */
 class Login extends Controller {
 
+	/**
+	 * Login::Login()
+	 * 
+	 * @return
+	 */
 	function Login()
 	{
 		parent::Controller();	
 	}
 	
+	/**
+	 * Login::index()
+	 * 
+	 * @return
+	 */
 	function index()
 	{
             
@@ -22,6 +44,14 @@ class Login extends Controller {
               
 	}
         
+        /**
+         * Login::entrar()
+         * 
+         * Função para realizar login no sistema.
+         * 
+         * @see Simplelogin::login
+         * @return void
+         */
         function entrar(){
             
             $login = $_POST['login'];
