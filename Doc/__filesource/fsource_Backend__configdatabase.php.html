@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for database.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file database.php</h1>
+<p>Documentation is available at <a href="../Backend/_config---database.php.html">database.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php&nbsp;&nbsp;</span><span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!&nbsp;</span><a href="http://www.php.net/defined">defined</a><span class="src-sym">(</span><span class="src-str">'BASEPATH'</span><span class="src-sym">))&nbsp;</span><span class="src-key">exit</span><span class="src-sym">(</span><span class="src-str">'No&nbsp;direct&nbsp;script&nbsp;access&nbsp;allowed'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-comm">|&nbsp;-------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-comm">|&nbsp;DATABASE&nbsp;CONNECTIVITY&nbsp;SETTINGS</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-comm">|&nbsp;-------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-comm">|&nbsp;This&nbsp;file&nbsp;will&nbsp;contain&nbsp;the&nbsp;settings&nbsp;needed&nbsp;to&nbsp;access&nbsp;your&nbsp;database.</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-comm">|&nbsp;For&nbsp;complete&nbsp;instructions&nbsp;please&nbsp;consult&nbsp;the&nbsp;&quot;Database&nbsp;Connection&quot;</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-comm">|&nbsp;page&nbsp;of&nbsp;the&nbsp;User&nbsp;Guide.</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-comm">|&nbsp;-------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-comm">|&nbsp;EXPLANATION&nbsp;OF&nbsp;VARIABLES</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-comm">|&nbsp;-------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;['hostname']&nbsp;The&nbsp;hostname&nbsp;of&nbsp;your&nbsp;database&nbsp;server.</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;['username']&nbsp;The&nbsp;username&nbsp;used&nbsp;to&nbsp;connect&nbsp;to&nbsp;the&nbsp;database</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;['password']&nbsp;The&nbsp;password&nbsp;used&nbsp;to&nbsp;connect&nbsp;to&nbsp;the&nbsp;database</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;['database']&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;database&nbsp;you&nbsp;want&nbsp;to&nbsp;connect&nbsp;to</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;['dbdriver']&nbsp;The&nbsp;database&nbsp;type.&nbsp;ie:&nbsp;mysql.&nbsp;&nbsp;Currently&nbsp;supported:</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-comm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mysql,&nbsp;mysqli,&nbsp;postgre,&nbsp;odbc,&nbsp;mssql,&nbsp;sqlite,&nbsp;oci8</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;['dbprefix']&nbsp;You&nbsp;can&nbsp;add&nbsp;an&nbsp;optional&nbsp;prefix,&nbsp;which&nbsp;will&nbsp;be&nbsp;added</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;the&nbsp;table&nbsp;name&nbsp;when&nbsp;using&nbsp;the&nbsp;&nbsp;Active&nbsp;Record&nbsp;class</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;['pconnect']&nbsp;TRUE/FALSE&nbsp;-&nbsp;Whether&nbsp;to&nbsp;use&nbsp;a&nbsp;persistent&nbsp;connection</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;['db_debug']&nbsp;TRUE/FALSE&nbsp;-&nbsp;Whether&nbsp;database&nbsp;errors&nbsp;should&nbsp;be&nbsp;displayed.</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;['cache_on']&nbsp;TRUE/FALSE&nbsp;-&nbsp;Enables/disables&nbsp;query&nbsp;caching</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;['cachedir']&nbsp;The&nbsp;path&nbsp;to&nbsp;the&nbsp;folder&nbsp;where&nbsp;cache&nbsp;files&nbsp;should&nbsp;be&nbsp;stored</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;['char_set']&nbsp;The&nbsp;character&nbsp;set&nbsp;used&nbsp;in&nbsp;communicating&nbsp;with&nbsp;the&nbsp;database</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;['dbcollat']&nbsp;The&nbsp;character&nbsp;collation&nbsp;used&nbsp;in&nbsp;communicating&nbsp;with&nbsp;the&nbsp;database</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-comm">|&nbsp;The&nbsp;$active_group&nbsp;variable&nbsp;lets&nbsp;you&nbsp;choose&nbsp;which&nbsp;connection&nbsp;group&nbsp;to</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-comm">|&nbsp;make&nbsp;active.&nbsp;&nbsp;By&nbsp;default&nbsp;there&nbsp;is&nbsp;only&nbsp;one&nbsp;group&nbsp;(the&nbsp;&quot;default&quot;&nbsp;group).</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-comm">|&nbsp;The&nbsp;$active_record&nbsp;variables&nbsp;lets&nbsp;you&nbsp;determine&nbsp;whether&nbsp;or&nbsp;not&nbsp;to&nbsp;load</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-comm">|&nbsp;the&nbsp;active&nbsp;record&nbsp;class</span></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-var">$active_group&nbsp;</span>=&nbsp;<span class="src-str">&quot;default&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-var">$active_record&nbsp;</span>=&nbsp;<span class="src-id">TRUE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a40"></a><span class="src-var">$db</span><span class="src-sym">[</span><span class="src-str">'default'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'hostname'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">&quot;localhost&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-var">$db</span><span class="src-sym">[</span><span class="src-str">'default'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'username'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">&quot;root&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-var">$db</span><span class="src-sym">[</span><span class="src-str">'default'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'password'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">&quot;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-var">$db</span><span class="src-sym">[</span><span class="src-str">'default'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'database'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">&quot;sistema&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a44"></a><span class="src-var">$db</span><span class="src-sym">[</span><span class="src-str">'default'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'dbdriver'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">&quot;mysql&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a45"></a><span class="src-var">$db</span><span class="src-sym">[</span><span class="src-str">'default'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'dbprefix'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">&quot;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a46"></a><span class="src-var">$db</span><span class="src-sym">[</span><span class="src-str">'default'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'pconnect'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-id">TRUE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a47"></a><span class="src-var">$db</span><span class="src-sym">[</span><span class="src-str">'default'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'db_debug'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-id">TRUE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a48"></a><span class="src-var">$db</span><span class="src-sym">[</span><span class="src-str">'default'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'cache_on'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-id">FALSE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a49"></a><span class="src-var">$db</span><span class="src-sym">[</span><span class="src-str">'default'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'cachedir'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">&quot;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a50"></a><span class="src-var">$db</span><span class="src-sym">[</span><span class="src-str">'default'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'char_set'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">&quot;utf8&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a51"></a><span class="src-var">$db</span><span class="src-sym">[</span><span class="src-str">'default'</span><span class="src-sym">]</span><span class="src-sym">[</span><span class="src-str">'dbcollat'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">&quot;utf8_general_ci&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a54"></a><span class="src-comm">/*&nbsp;End&nbsp;of&nbsp;file&nbsp;database.php&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a55"></a><span class="src-comm">/*&nbsp;Location:&nbsp;./system/application/config/database.php&nbsp;*/</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 24 Aug 2011 22:27:29 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</body>
+</html>

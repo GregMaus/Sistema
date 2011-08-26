@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for config.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file config.php</h1>
+<p>Documentation is available at <a href="../Backend/_config---config.php.html">config.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php&nbsp;&nbsp;</span><span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!&nbsp;</span><a href="http://www.php.net/defined">defined</a><span class="src-sym">(</span><span class="src-str">'BASEPATH'</span><span class="src-sym">))&nbsp;</span><span class="src-key">exit</span><span class="src-sym">(</span><span class="src-str">'No&nbsp;direct&nbsp;script&nbsp;access&nbsp;allowed'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a2"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-comm">|&nbsp;Base&nbsp;Site&nbsp;URL</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-comm">|&nbsp;URL&nbsp;to&nbsp;your&nbsp;CodeIgniter&nbsp;root.&nbsp;Typically&nbsp;this&nbsp;will&nbsp;be&nbsp;your&nbsp;base&nbsp;URL,</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-comm">|&nbsp;WITH&nbsp;a&nbsp;trailing&nbsp;slash:</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;http://example.com/</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'base_url'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-str">&quot;http://localhost/sistema/&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a15"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-comm">|&nbsp;Index&nbsp;File</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-comm">|&nbsp;Typically&nbsp;this&nbsp;will&nbsp;be&nbsp;your&nbsp;index.php&nbsp;file,&nbsp;unless&nbsp;you've&nbsp;renamed&nbsp;it&nbsp;to</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-comm">|&nbsp;something&nbsp;else.&nbsp;If&nbsp;you&nbsp;are&nbsp;using&nbsp;mod_rewrite&nbsp;to&nbsp;remove&nbsp;the&nbsp;page&nbsp;set&nbsp;this</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-comm">|&nbsp;variable&nbsp;so&nbsp;that&nbsp;it&nbsp;is&nbsp;blank.</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'index_page'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">&quot;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a27"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-comm">|&nbsp;URI&nbsp;PROTOCOL</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-comm">|&nbsp;This&nbsp;item&nbsp;determines&nbsp;which&nbsp;server&nbsp;global&nbsp;should&nbsp;be&nbsp;used&nbsp;to&nbsp;retrieve&nbsp;the</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-comm">|&nbsp;URI&nbsp;string.&nbsp;&nbsp;The&nbsp;default&nbsp;setting&nbsp;of&nbsp;&quot;AUTO&quot;&nbsp;works&nbsp;for&nbsp;most&nbsp;servers.</span></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-comm">|&nbsp;If&nbsp;your&nbsp;links&nbsp;do&nbsp;not&nbsp;seem&nbsp;to&nbsp;work,&nbsp;try&nbsp;one&nbsp;of&nbsp;the&nbsp;other&nbsp;delicious&nbsp;flavors:</span></div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-comm">|&nbsp;'AUTO'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default&nbsp;-&nbsp;auto&nbsp;detects</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-comm">|&nbsp;'PATH_INFO'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uses&nbsp;the&nbsp;PATH_INFO</span></div></li>
+<li><div class="src-line"><a name="a39"></a><span class="src-comm">|&nbsp;'QUERY_STRING'&nbsp;&nbsp;&nbsp;&nbsp;Uses&nbsp;the&nbsp;QUERY_STRING</span></div></li>
+<li><div class="src-line"><a name="a40"></a><span class="src-comm">|&nbsp;'REQUEST_URI'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uses&nbsp;the&nbsp;REQUEST_URI</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-comm">|&nbsp;'ORIG_PATH_INFO'&nbsp;&nbsp;&nbsp;&nbsp;Uses&nbsp;the&nbsp;ORIG_PATH_INFO</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a44"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'uri_protocol'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-str">&quot;AUTO&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a46"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a47"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a48"></a><span class="src-comm">|&nbsp;URL&nbsp;suffix</span></div></li>
+<li><div class="src-line"><a name="a49"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a50"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a51"></a><span class="src-comm">|&nbsp;This&nbsp;option&nbsp;allows&nbsp;you&nbsp;to&nbsp;add&nbsp;a&nbsp;suffix&nbsp;to&nbsp;all&nbsp;URLs&nbsp;generated&nbsp;by&nbsp;CodeIgniter.</span></div></li>
+<li><div class="src-line"><a name="a52"></a><span class="src-comm">|&nbsp;For&nbsp;more&nbsp;information&nbsp;please&nbsp;see&nbsp;the&nbsp;user&nbsp;guide:</span></div></li>
+<li><div class="src-line"><a name="a53"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a54"></a><span class="src-comm">|&nbsp;http://codeigniter.com/user_guide/general/urls.html</span></div></li>
+<li><div class="src-line"><a name="a55"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a57"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'url_suffix'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">&quot;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a58"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a59"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a60"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a61"></a><span class="src-comm">|&nbsp;Default&nbsp;Language</span></div></li>
+<li><div class="src-line"><a name="a62"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a63"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a64"></a><span class="src-comm">|&nbsp;This&nbsp;determines&nbsp;which&nbsp;set&nbsp;of&nbsp;language&nbsp;files&nbsp;should&nbsp;be&nbsp;used.&nbsp;Make&nbsp;sure</span></div></li>
+<li><div class="src-line"><a name="a65"></a><span class="src-comm">|&nbsp;there&nbsp;is&nbsp;an&nbsp;available&nbsp;translation&nbsp;if&nbsp;you&nbsp;intend&nbsp;to&nbsp;use&nbsp;something&nbsp;other</span></div></li>
+<li><div class="src-line"><a name="a66"></a><span class="src-comm">|&nbsp;than&nbsp;english.</span></div></li>
+<li><div class="src-line"><a name="a67"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a68"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a69"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'language'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-str">&quot;english&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a70"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a71"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a72"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a73"></a><span class="src-comm">|&nbsp;Default&nbsp;Character&nbsp;Set</span></div></li>
+<li><div class="src-line"><a name="a74"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a75"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a76"></a><span class="src-comm">|&nbsp;This&nbsp;determines&nbsp;which&nbsp;character&nbsp;set&nbsp;is&nbsp;used&nbsp;by&nbsp;default&nbsp;in&nbsp;various&nbsp;methods</span></div></li>
+<li><div class="src-line"><a name="a77"></a><span class="src-comm">|&nbsp;that&nbsp;require&nbsp;a&nbsp;character&nbsp;set&nbsp;to&nbsp;be&nbsp;provided.</span></div></li>
+<li><div class="src-line"><a name="a78"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a79"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a80"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'charset'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">&quot;UTF-8&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a81"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a82"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a83"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a84"></a><span class="src-comm">|&nbsp;Enable/Disable&nbsp;System&nbsp;Hooks</span></div></li>
+<li><div class="src-line"><a name="a85"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a86"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a87"></a><span class="src-comm">|&nbsp;If&nbsp;you&nbsp;would&nbsp;like&nbsp;to&nbsp;use&nbsp;the&nbsp;&quot;hooks&quot;&nbsp;feature&nbsp;you&nbsp;must&nbsp;enable&nbsp;it&nbsp;by</span></div></li>
+<li><div class="src-line"><a name="a88"></a><span class="src-comm">|&nbsp;setting&nbsp;this&nbsp;variable&nbsp;to&nbsp;TRUE&nbsp;(boolean).&nbsp;&nbsp;See&nbsp;the&nbsp;user&nbsp;guide&nbsp;for&nbsp;details.</span></div></li>
+<li><div class="src-line"><a name="a89"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a90"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a91"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'enable_hooks'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-id">FALSE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a92"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a93"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a94"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a95"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a96"></a><span class="src-comm">|&nbsp;Class&nbsp;Extension&nbsp;Prefix</span></div></li>
+<li><div class="src-line"><a name="a97"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a98"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a99"></a><span class="src-comm">|&nbsp;This&nbsp;item&nbsp;allows&nbsp;you&nbsp;to&nbsp;set&nbsp;the&nbsp;filename/classname&nbsp;prefix&nbsp;when&nbsp;extending</span></div></li>
+<li><div class="src-line"><a name="a100"></a><span class="src-comm">|&nbsp;native&nbsp;libraries.&nbsp;&nbsp;For&nbsp;more&nbsp;information&nbsp;please&nbsp;see&nbsp;the&nbsp;user&nbsp;guide:</span></div></li>
+<li><div class="src-line"><a name="a101"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a102"></a><span class="src-comm">|&nbsp;http://codeigniter.com/user_guide/general/core_classes.html</span></div></li>
+<li><div class="src-line"><a name="a103"></a><span class="src-comm">|&nbsp;http://codeigniter.com/user_guide/general/creating_libraries.html</span></div></li>
+<li><div class="src-line"><a name="a104"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a105"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a106"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'subclass_prefix'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">'MY_'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a107"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a108"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a109"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a110"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a111"></a><span class="src-comm">|&nbsp;Allowed&nbsp;URL&nbsp;Characters</span></div></li>
+<li><div class="src-line"><a name="a112"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a113"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a114"></a><span class="src-comm">|&nbsp;This&nbsp;lets&nbsp;you&nbsp;specify&nbsp;with&nbsp;a&nbsp;regular&nbsp;expression&nbsp;which&nbsp;characters&nbsp;are&nbsp;permitted</span></div></li>
+<li><div class="src-line"><a name="a115"></a><span class="src-comm">|&nbsp;within&nbsp;your&nbsp;URLs.&nbsp;&nbsp;When&nbsp;someone&nbsp;tries&nbsp;to&nbsp;submit&nbsp;a&nbsp;URL&nbsp;with&nbsp;disallowed</span></div></li>
+<li><div class="src-line"><a name="a116"></a><span class="src-comm">|&nbsp;characters&nbsp;they&nbsp;will&nbsp;get&nbsp;a&nbsp;warning&nbsp;message.</span></div></li>
+<li><div class="src-line"><a name="a117"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a118"></a><span class="src-comm">|&nbsp;As&nbsp;a&nbsp;security&nbsp;measure&nbsp;you&nbsp;are&nbsp;STRONGLY&nbsp;encouraged&nbsp;to&nbsp;restrict&nbsp;URLs&nbsp;to</span></div></li>
+<li><div class="src-line"><a name="a119"></a><span class="src-comm">|&nbsp;as&nbsp;few&nbsp;characters&nbsp;as&nbsp;possible.&nbsp;&nbsp;By&nbsp;default&nbsp;only&nbsp;these&nbsp;are&nbsp;allowed:&nbsp;a-z&nbsp;0-9~%.:_-</span></div></li>
+<li><div class="src-line"><a name="a120"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a121"></a><span class="src-comm">|&nbsp;Leave&nbsp;blank&nbsp;to&nbsp;allow&nbsp;all&nbsp;characters&nbsp;--&nbsp;but&nbsp;only&nbsp;if&nbsp;you&nbsp;are&nbsp;insane.</span></div></li>
+<li><div class="src-line"><a name="a122"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a123"></a><span class="src-comm">|&nbsp;DO&nbsp;NOT&nbsp;CHANGE&nbsp;THIS&nbsp;UNLESS&nbsp;YOU&nbsp;FULLY&nbsp;UNDERSTAND&nbsp;THE&nbsp;REPERCUSSIONS!!</span></div></li>
+<li><div class="src-line"><a name="a124"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a125"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a126"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'permitted_uri_chars'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">'a-z&nbsp;0-9~%.:_\-'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a127"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a128"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a129"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a130"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a131"></a><span class="src-comm">|&nbsp;Enable&nbsp;Query&nbsp;Strings</span></div></li>
+<li><div class="src-line"><a name="a132"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a133"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a134"></a><span class="src-comm">|&nbsp;By&nbsp;default&nbsp;CodeIgniter&nbsp;uses&nbsp;search-engine&nbsp;friendly&nbsp;segment&nbsp;based&nbsp;URLs:</span></div></li>
+<li><div class="src-line"><a name="a135"></a><span class="src-comm">|&nbsp;example.com/who/what/where/</span></div></li>
+<li><div class="src-line"><a name="a136"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a137"></a><span class="src-comm">|&nbsp;You&nbsp;can&nbsp;optionally&nbsp;enable&nbsp;standard&nbsp;query&nbsp;string&nbsp;based&nbsp;URLs:</span></div></li>
+<li><div class="src-line"><a name="a138"></a><span class="src-comm">|&nbsp;example.com?who=me&amp;what=something&amp;where=here</span></div></li>
+<li><div class="src-line"><a name="a139"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a140"></a><span class="src-comm">|&nbsp;Options&nbsp;are:&nbsp;TRUE&nbsp;or&nbsp;FALSE&nbsp;(boolean)</span></div></li>
+<li><div class="src-line"><a name="a141"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a142"></a><span class="src-comm">|&nbsp;The&nbsp;other&nbsp;items&nbsp;let&nbsp;you&nbsp;set&nbsp;the&nbsp;query&nbsp;string&nbsp;&quot;words&quot;&nbsp;that&nbsp;will</span></div></li>
+<li><div class="src-line"><a name="a143"></a><span class="src-comm">|&nbsp;invoke&nbsp;your&nbsp;controllers&nbsp;and&nbsp;its&nbsp;functions:</span></div></li>
+<li><div class="src-line"><a name="a144"></a><span class="src-comm">|&nbsp;example.com/index.php?c=controller&amp;m=function</span></div></li>
+<li><div class="src-line"><a name="a145"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a146"></a><span class="src-comm">|&nbsp;Please&nbsp;note&nbsp;that&nbsp;some&nbsp;of&nbsp;the&nbsp;helpers&nbsp;won't&nbsp;work&nbsp;as&nbsp;expected&nbsp;when</span></div></li>
+<li><div class="src-line"><a name="a147"></a><span class="src-comm">|&nbsp;this&nbsp;feature&nbsp;is&nbsp;enabled,&nbsp;since&nbsp;CodeIgniter&nbsp;is&nbsp;designed&nbsp;primarily&nbsp;to</span></div></li>
+<li><div class="src-line"><a name="a148"></a><span class="src-comm">|&nbsp;use&nbsp;segment&nbsp;based&nbsp;URLs.</span></div></li>
+<li><div class="src-line"><a name="a149"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a150"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a151"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'enable_query_strings'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-id">FALSE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a152"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'controller_trigger'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-str">'c'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a153"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'function_trigger'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-str">'m'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a154"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'directory_trigger'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-str">'d'</span><span class="src-sym">;&nbsp;</span><span class="src-comm">//&nbsp;experimental&nbsp;not&nbsp;currently&nbsp;in&nbsp;use</span></div></li>
+<li><div class="src-line"><a name="a155"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a156"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a157"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a158"></a><span class="src-comm">|&nbsp;Error&nbsp;Logging&nbsp;Threshold</span></div></li>
+<li><div class="src-line"><a name="a159"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a160"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a161"></a><span class="src-comm">|&nbsp;If&nbsp;you&nbsp;have&nbsp;enabled&nbsp;error&nbsp;logging,&nbsp;you&nbsp;can&nbsp;set&nbsp;an&nbsp;error&nbsp;threshold&nbsp;to&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a162"></a><span class="src-comm">|&nbsp;determine&nbsp;what&nbsp;gets&nbsp;logged.&nbsp;Threshold&nbsp;options&nbsp;are:</span></div></li>
+<li><div class="src-line"><a name="a163"></a><span class="src-comm">|&nbsp;You&nbsp;can&nbsp;enable&nbsp;error&nbsp;logging&nbsp;by&nbsp;setting&nbsp;a&nbsp;threshold&nbsp;over&nbsp;zero.&nbsp;The</span></div></li>
+<li><div class="src-line"><a name="a164"></a><span class="src-comm">|&nbsp;threshold&nbsp;determines&nbsp;what&nbsp;gets&nbsp;logged.&nbsp;Threshold&nbsp;options&nbsp;are:</span></div></li>
+<li><div class="src-line"><a name="a165"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a166"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;=&nbsp;Disables&nbsp;logging,&nbsp;Error&nbsp;logging&nbsp;TURNED&nbsp;OFF</span></div></li>
+<li><div class="src-line"><a name="a167"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;=&nbsp;Error&nbsp;Messages&nbsp;(including&nbsp;PHP&nbsp;errors)</span></div></li>
+<li><div class="src-line"><a name="a168"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;=&nbsp;Debug&nbsp;Messages</span></div></li>
+<li><div class="src-line"><a name="a169"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;=&nbsp;Informational&nbsp;Messages</span></div></li>
+<li><div class="src-line"><a name="a170"></a><span class="src-comm">|&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;=&nbsp;All&nbsp;Messages</span></div></li>
+<li><div class="src-line"><a name="a171"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a172"></a><span class="src-comm">|&nbsp;For&nbsp;a&nbsp;live&nbsp;site&nbsp;you'll&nbsp;usually&nbsp;only&nbsp;enable&nbsp;Errors&nbsp;(1)&nbsp;to&nbsp;be&nbsp;logged&nbsp;otherwise</span></div></li>
+<li><div class="src-line"><a name="a173"></a><span class="src-comm">|&nbsp;your&nbsp;log&nbsp;files&nbsp;will&nbsp;fill&nbsp;up&nbsp;very&nbsp;fast.</span></div></li>
+<li><div class="src-line"><a name="a174"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a175"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a176"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'log_threshold'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-num">0</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a177"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a178"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a179"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a180"></a><span class="src-comm">|&nbsp;Error&nbsp;Logging&nbsp;Directory&nbsp;Path</span></div></li>
+<li><div class="src-line"><a name="a181"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a182"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a183"></a><span class="src-comm">|&nbsp;Leave&nbsp;this&nbsp;BLANK&nbsp;unless&nbsp;you&nbsp;would&nbsp;like&nbsp;to&nbsp;set&nbsp;something&nbsp;other&nbsp;than&nbsp;the&nbsp;default</span></div></li>
+<li><div class="src-line"><a name="a184"></a><span class="src-comm">|&nbsp;system/logs/&nbsp;folder.&nbsp;&nbsp;Use&nbsp;a&nbsp;full&nbsp;server&nbsp;path&nbsp;with&nbsp;trailing&nbsp;slash.</span></div></li>
+<li><div class="src-line"><a name="a185"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a186"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a187"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'log_path'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">''</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a188"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a189"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a190"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a191"></a><span class="src-comm">|&nbsp;Date&nbsp;Format&nbsp;for&nbsp;Logs</span></div></li>
+<li><div class="src-line"><a name="a192"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a193"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a194"></a><span class="src-comm">|&nbsp;Each&nbsp;item&nbsp;that&nbsp;is&nbsp;logged&nbsp;has&nbsp;an&nbsp;associated&nbsp;date.&nbsp;You&nbsp;can&nbsp;use&nbsp;PHP&nbsp;date</span></div></li>
+<li><div class="src-line"><a name="a195"></a><span class="src-comm">|&nbsp;codes&nbsp;to&nbsp;set&nbsp;your&nbsp;own&nbsp;date&nbsp;formatting</span></div></li>
+<li><div class="src-line"><a name="a196"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a197"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a198"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'log_date_format'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">'Y-m-d&nbsp;H:i:s'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a199"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a200"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a201"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a202"></a><span class="src-comm">|&nbsp;Cache&nbsp;Directory&nbsp;Path</span></div></li>
+<li><div class="src-line"><a name="a203"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a204"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a205"></a><span class="src-comm">|&nbsp;Leave&nbsp;this&nbsp;BLANK&nbsp;unless&nbsp;you&nbsp;would&nbsp;like&nbsp;to&nbsp;set&nbsp;something&nbsp;other&nbsp;than&nbsp;the&nbsp;default</span></div></li>
+<li><div class="src-line"><a name="a206"></a><span class="src-comm">|&nbsp;system/cache/&nbsp;folder.&nbsp;&nbsp;Use&nbsp;a&nbsp;full&nbsp;server&nbsp;path&nbsp;with&nbsp;trailing&nbsp;slash.</span></div></li>
+<li><div class="src-line"><a name="a207"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a208"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a209"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'cache_path'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">''</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a210"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a211"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a212"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a213"></a><span class="src-comm">|&nbsp;Encryption&nbsp;Key</span></div></li>
+<li><div class="src-line"><a name="a214"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a215"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a216"></a><span class="src-comm">|&nbsp;If&nbsp;you&nbsp;use&nbsp;the&nbsp;Encryption&nbsp;class&nbsp;or&nbsp;the&nbsp;Sessions&nbsp;class&nbsp;with&nbsp;encryption</span></div></li>
+<li><div class="src-line"><a name="a217"></a><span class="src-comm">|&nbsp;enabled&nbsp;you&nbsp;MUST&nbsp;set&nbsp;an&nbsp;encryption&nbsp;key.&nbsp;&nbsp;See&nbsp;the&nbsp;user&nbsp;guide&nbsp;for&nbsp;info.</span></div></li>
+<li><div class="src-line"><a name="a218"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a219"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a220"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'encryption_key'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">&quot;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a221"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a222"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a223"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a224"></a><span class="src-comm">|&nbsp;Session&nbsp;Variables</span></div></li>
+<li><div class="src-line"><a name="a225"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a226"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a227"></a><span class="src-comm">|&nbsp;'session_cookie_name'&nbsp;=&nbsp;the&nbsp;name&nbsp;you&nbsp;want&nbsp;for&nbsp;the&nbsp;cookie</span></div></li>
+<li><div class="src-line"><a name="a228"></a><span class="src-comm">|&nbsp;'encrypt_sess_cookie'&nbsp;=&nbsp;TRUE/FALSE&nbsp;(boolean).&nbsp;&nbsp;Whether&nbsp;to&nbsp;encrypt&nbsp;the&nbsp;cookie</span></div></li>
+<li><div class="src-line"><a name="a229"></a><span class="src-comm">|&nbsp;'session_expiration'&nbsp;&nbsp;=&nbsp;the&nbsp;number&nbsp;of&nbsp;SECONDS&nbsp;you&nbsp;want&nbsp;the&nbsp;session&nbsp;to&nbsp;last.</span></div></li>
+<li><div class="src-line"><a name="a230"></a><span class="src-comm">|&nbsp;&nbsp;by&nbsp;default&nbsp;sessions&nbsp;last&nbsp;7200&nbsp;seconds&nbsp;(two&nbsp;hours).&nbsp;&nbsp;Set&nbsp;to&nbsp;zero&nbsp;for&nbsp;no&nbsp;expiration.</span></div></li>
+<li><div class="src-line"><a name="a231"></a><span class="src-comm">|&nbsp;'time_to_update'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;how&nbsp;many&nbsp;seconds&nbsp;between&nbsp;CI&nbsp;refreshing&nbsp;Session&nbsp;Information</span></div></li>
+<li><div class="src-line"><a name="a232"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a233"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a234"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'sess_cookie_name'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-str">'ci_session'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a235"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'sess_expiration'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-num">7200</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a236"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'sess_encrypt_cookie'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-id">FALSE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a237"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'sess_use_database'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-id">FALSE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a238"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'sess_table_name'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-str">'ci_sessions'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a239"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'sess_match_ip'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-id">FALSE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a240"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'sess_match_useragent'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-id">TRUE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a241"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'sess_time_to_update'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-num">300</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a242"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a243"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a244"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a245"></a><span class="src-comm">|&nbsp;Cookie&nbsp;Related&nbsp;Variables</span></div></li>
+<li><div class="src-line"><a name="a246"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a247"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a248"></a><span class="src-comm">|&nbsp;'cookie_prefix'&nbsp;=&nbsp;Set&nbsp;a&nbsp;prefix&nbsp;if&nbsp;you&nbsp;need&nbsp;to&nbsp;avoid&nbsp;collisions</span></div></li>
+<li><div class="src-line"><a name="a249"></a><span class="src-comm">|&nbsp;'cookie_domain'&nbsp;=&nbsp;Set&nbsp;to&nbsp;.your-domain.com&nbsp;for&nbsp;site-wide&nbsp;cookies</span></div></li>
+<li><div class="src-line"><a name="a250"></a><span class="src-comm">|&nbsp;'cookie_path'&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;Typically&nbsp;will&nbsp;be&nbsp;a&nbsp;forward&nbsp;slash</span></div></li>
+<li><div class="src-line"><a name="a251"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a252"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a253"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'cookie_prefix'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-str">&quot;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a254"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'cookie_domain'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-str">&quot;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a255"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'cookie_path'</span><span class="src-sym">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&nbsp;<span class="src-str">&quot;/&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a256"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a257"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a258"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a259"></a><span class="src-comm">|&nbsp;Global&nbsp;XSS&nbsp;Filtering</span></div></li>
+<li><div class="src-line"><a name="a260"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a261"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a262"></a><span class="src-comm">|&nbsp;Determines&nbsp;whether&nbsp;the&nbsp;XSS&nbsp;filter&nbsp;is&nbsp;always&nbsp;active&nbsp;when&nbsp;GET,&nbsp;POST&nbsp;or</span></div></li>
+<li><div class="src-line"><a name="a263"></a><span class="src-comm">|&nbsp;COOKIE&nbsp;data&nbsp;is&nbsp;encountered</span></div></li>
+<li><div class="src-line"><a name="a264"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a265"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a266"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'global_xss_filtering'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-id">FALSE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a267"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a268"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a269"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a270"></a><span class="src-comm">|&nbsp;Output&nbsp;Compression</span></div></li>
+<li><div class="src-line"><a name="a271"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a272"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a273"></a><span class="src-comm">|&nbsp;Enables&nbsp;Gzip&nbsp;output&nbsp;compression&nbsp;for&nbsp;faster&nbsp;page&nbsp;loads.&nbsp;&nbsp;When&nbsp;enabled,</span></div></li>
+<li><div class="src-line"><a name="a274"></a><span class="src-comm">|&nbsp;the&nbsp;output&nbsp;class&nbsp;will&nbsp;test&nbsp;whether&nbsp;your&nbsp;server&nbsp;supports&nbsp;Gzip.</span></div></li>
+<li><div class="src-line"><a name="a275"></a><span class="src-comm">|&nbsp;Even&nbsp;if&nbsp;it&nbsp;does,&nbsp;however,&nbsp;not&nbsp;all&nbsp;browsers&nbsp;support&nbsp;compression</span></div></li>
+<li><div class="src-line"><a name="a276"></a><span class="src-comm">|&nbsp;so&nbsp;enable&nbsp;only&nbsp;if&nbsp;you&nbsp;are&nbsp;reasonably&nbsp;sure&nbsp;your&nbsp;visitors&nbsp;can&nbsp;handle&nbsp;it.</span></div></li>
+<li><div class="src-line"><a name="a277"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a278"></a><span class="src-comm">|&nbsp;VERY&nbsp;IMPORTANT:&nbsp;&nbsp;If&nbsp;you&nbsp;are&nbsp;getting&nbsp;a&nbsp;blank&nbsp;page&nbsp;when&nbsp;compression&nbsp;is&nbsp;enabled&nbsp;it</span></div></li>
+<li><div class="src-line"><a name="a279"></a><span class="src-comm">|&nbsp;means&nbsp;you&nbsp;are&nbsp;prematurely&nbsp;outputting&nbsp;something&nbsp;to&nbsp;your&nbsp;browser.&nbsp;It&nbsp;could</span></div></li>
+<li><div class="src-line"><a name="a280"></a><span class="src-comm">|&nbsp;even&nbsp;be&nbsp;a&nbsp;line&nbsp;of&nbsp;whitespace&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;one&nbsp;of&nbsp;your&nbsp;scripts.&nbsp;&nbsp;For</span></div></li>
+<li><div class="src-line"><a name="a281"></a><span class="src-comm">|&nbsp;compression&nbsp;to&nbsp;work,&nbsp;nothing&nbsp;can&nbsp;be&nbsp;sent&nbsp;before&nbsp;the&nbsp;output&nbsp;buffer&nbsp;is&nbsp;called</span></div></li>
+<li><div class="src-line"><a name="a282"></a><span class="src-comm">|&nbsp;by&nbsp;the&nbsp;output&nbsp;class.&nbsp;&nbsp;Do&nbsp;not&nbsp;&quot;echo&quot;&nbsp;any&nbsp;values&nbsp;with&nbsp;compression&nbsp;enabled.</span></div></li>
+<li><div class="src-line"><a name="a283"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a284"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a285"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'compress_output'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-id">FALSE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a286"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a287"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a288"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a289"></a><span class="src-comm">|&nbsp;Master&nbsp;Time&nbsp;Reference</span></div></li>
+<li><div class="src-line"><a name="a290"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a291"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a292"></a><span class="src-comm">|&nbsp;Options&nbsp;are&nbsp;&quot;local&quot;&nbsp;or&nbsp;&quot;gmt&quot;.&nbsp;&nbsp;This&nbsp;pref&nbsp;tells&nbsp;the&nbsp;system&nbsp;whether&nbsp;to&nbsp;use</span></div></li>
+<li><div class="src-line"><a name="a293"></a><span class="src-comm">|&nbsp;your&nbsp;server's&nbsp;local&nbsp;time&nbsp;as&nbsp;the&nbsp;master&nbsp;&quot;now&quot;&nbsp;reference,&nbsp;or&nbsp;convert&nbsp;it&nbsp;to</span></div></li>
+<li><div class="src-line"><a name="a294"></a><span class="src-comm">|&nbsp;GMT.&nbsp;&nbsp;See&nbsp;the&nbsp;&quot;date&nbsp;helper&quot;&nbsp;page&nbsp;of&nbsp;the&nbsp;user&nbsp;guide&nbsp;for&nbsp;information</span></div></li>
+<li><div class="src-line"><a name="a295"></a><span class="src-comm">|&nbsp;regarding&nbsp;date&nbsp;handling.</span></div></li>
+<li><div class="src-line"><a name="a296"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a297"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a298"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'time_reference'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">'local'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a299"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a300"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a301"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a302"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a303"></a><span class="src-comm">|&nbsp;Rewrite&nbsp;PHP&nbsp;Short&nbsp;Tags</span></div></li>
+<li><div class="src-line"><a name="a304"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a305"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a306"></a><span class="src-comm">|&nbsp;If&nbsp;your&nbsp;PHP&nbsp;installation&nbsp;does&nbsp;not&nbsp;have&nbsp;short&nbsp;tag&nbsp;support&nbsp;enabled&nbsp;CI</span></div></li>
+<li><div class="src-line"><a name="a307"></a><span class="src-comm">|&nbsp;can&nbsp;rewrite&nbsp;the&nbsp;tags&nbsp;on-the-fly,&nbsp;enabling&nbsp;you&nbsp;to&nbsp;utilize&nbsp;that&nbsp;syntax</span></div></li>
+<li><div class="src-line"><a name="a308"></a><span class="src-comm">|&nbsp;in&nbsp;your&nbsp;view&nbsp;files.&nbsp;&nbsp;Options&nbsp;are&nbsp;TRUE&nbsp;or&nbsp;FALSE&nbsp;(boolean)</span></div></li>
+<li><div class="src-line"><a name="a309"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a310"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a311"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'rewrite_short_tags'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-id">FALSE</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a312"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a313"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a314"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a315"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a316"></a><span class="src-comm">|&nbsp;Reverse&nbsp;Proxy&nbsp;IPs</span></div></li>
+<li><div class="src-line"><a name="a317"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a318"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a319"></a><span class="src-comm">|&nbsp;If&nbsp;your&nbsp;server&nbsp;is&nbsp;behind&nbsp;a&nbsp;reverse&nbsp;proxy,&nbsp;you&nbsp;must&nbsp;whitelist&nbsp;the&nbsp;proxy&nbsp;IP</span></div></li>
+<li><div class="src-line"><a name="a320"></a><span class="src-comm">|&nbsp;addresses&nbsp;from&nbsp;which&nbsp;CodeIgniter&nbsp;should&nbsp;trust&nbsp;the&nbsp;HTTP_X_FORWARDED_FOR</span></div></li>
+<li><div class="src-line"><a name="a321"></a><span class="src-comm">|&nbsp;header&nbsp;in&nbsp;order&nbsp;to&nbsp;properly&nbsp;identify&nbsp;the&nbsp;visitor's&nbsp;IP&nbsp;address.</span></div></li>
+<li><div class="src-line"><a name="a322"></a><span class="src-comm">|&nbsp;Comma-delimited,&nbsp;e.g.&nbsp;'10.0.1.200,10.0.1.201'</span></div></li>
+<li><div class="src-line"><a name="a323"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a324"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a325"></a><span class="src-var">$config</span><span class="src-sym">[</span><span class="src-str">'proxy_ips'</span><span class="src-sym">]&nbsp;</span>=&nbsp;<span class="src-str">''</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a326"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a327"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a328"></a><span class="src-comm">/*&nbsp;End&nbsp;of&nbsp;file&nbsp;config.php&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a329"></a><span class="src-comm">/*&nbsp;Location:&nbsp;./system/application/config/config.php&nbsp;*/</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 24 Aug 2011 22:27:28 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</body>
+</html>

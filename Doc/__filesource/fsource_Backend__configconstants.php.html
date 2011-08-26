@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for constants.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file constants.php</h1>
+<p>Documentation is available at <a href="../Backend/_config---constants.php.html">constants.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php&nbsp;&nbsp;</span><span class="src-key">if&nbsp;</span><span class="src-sym">(&nbsp;</span><span class="src-sym">!&nbsp;</span><a href="http://www.php.net/defined">defined</a><span class="src-sym">(</span><span class="src-str">'BASEPATH'</span><span class="src-sym">))&nbsp;</span><span class="src-key">exit</span><span class="src-sym">(</span><span class="src-str">'No&nbsp;direct&nbsp;script&nbsp;access&nbsp;allowed'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a2"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-comm">|&nbsp;File&nbsp;and&nbsp;Directory&nbsp;Modes</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-comm">|&nbsp;These&nbsp;prefs&nbsp;are&nbsp;used&nbsp;when&nbsp;checking&nbsp;and&nbsp;setting&nbsp;modes&nbsp;when&nbsp;working</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-comm">|&nbsp;with&nbsp;the&nbsp;file&nbsp;system.&nbsp;&nbsp;The&nbsp;defaults&nbsp;are&nbsp;fine&nbsp;on&nbsp;servers&nbsp;with&nbsp;proper</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-comm">|&nbsp;security,&nbsp;but&nbsp;you&nbsp;may&nbsp;wish&nbsp;(or&nbsp;even&nbsp;need)&nbsp;to&nbsp;change&nbsp;the&nbsp;values&nbsp;in</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-comm">|&nbsp;certain&nbsp;environments&nbsp;(Apache&nbsp;running&nbsp;a&nbsp;separate&nbsp;process&nbsp;for&nbsp;each</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-comm">|&nbsp;user,&nbsp;PHP&nbsp;under&nbsp;CGI&nbsp;with&nbsp;Apache&nbsp;suEXEC,&nbsp;etc.).&nbsp;&nbsp;Octal&nbsp;values&nbsp;should</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-comm">|&nbsp;always&nbsp;be&nbsp;used&nbsp;to&nbsp;set&nbsp;the&nbsp;mode&nbsp;correctly.</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a16"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'FILE_READ_MODE'</span><span class="src-sym">,&nbsp;</span><span class="src-num">0644</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a17"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'FILE_WRITE_MODE'</span><span class="src-sym">,&nbsp;</span><span class="src-num">0666</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a18"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'DIR_READ_MODE'</span><span class="src-sym">,&nbsp;</span><span class="src-num">0755</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a19"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'DIR_WRITE_MODE'</span><span class="src-sym">,&nbsp;</span><span class="src-num">0777</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a20"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-comm">/*</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-comm">|&nbsp;File&nbsp;Stream&nbsp;Modes</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-comm">|--------------------------------------------------------------------------</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-comm">|&nbsp;These&nbsp;modes&nbsp;are&nbsp;used&nbsp;when&nbsp;working&nbsp;with&nbsp;fopen()/popen()</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-comm">|</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-comm">*/</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a30"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'FOPEN_READ'</span><span class="src-sym">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="src-str">'rb'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a31"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'FOPEN_READ_WRITE'</span><span class="src-sym">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="src-str">'r+b'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a32"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'FOPEN_WRITE_CREATE_DESTRUCTIVE'</span><span class="src-sym">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="src-str">'wb'</span><span class="src-sym">)</span><span class="src-sym">;&nbsp;</span><span class="src-comm">//&nbsp;truncates&nbsp;existing&nbsp;file&nbsp;data,&nbsp;use&nbsp;with&nbsp;care</span></div></li>
+<li><div class="src-line"><a name="a33"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'FOPEN_READ_WRITE_CREATE_DESTRUCTIVE'</span><span class="src-sym">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="src-str">'w+b'</span><span class="src-sym">)</span><span class="src-sym">;&nbsp;</span><span class="src-comm">//&nbsp;truncates&nbsp;existing&nbsp;file&nbsp;data,&nbsp;use&nbsp;with&nbsp;care</span></div></li>
+<li><div class="src-line"><a name="a34"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'FOPEN_WRITE_CREATE'</span><span class="src-sym">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="src-str">'ab'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a35"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'FOPEN_READ_WRITE_CREATE'</span><span class="src-sym">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="src-str">'a+b'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a36"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'FOPEN_WRITE_CREATE_STRICT'</span><span class="src-sym">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="src-str">'xb'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a37"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">'FOPEN_READ_WRITE_CREATE_STRICT'</span><span class="src-sym">,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="src-str">'x+b'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a40"></a><span class="src-comm">/*&nbsp;End&nbsp;of&nbsp;file&nbsp;constants.php&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-comm">/*&nbsp;Location:&nbsp;./system/application/config/constants.php&nbsp;*/</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 24 Aug 2011 22:27:28 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</body>
+</html>
